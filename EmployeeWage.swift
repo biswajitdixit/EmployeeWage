@@ -6,27 +6,32 @@ let isPartTime = 2
 
 let empRatePerHrs = 20
 
+let NumOfWorkingDays = 20
+
+
+
+
 print("Welcome to Employee Wage")
 
 var empHrs = 0
 
 var empWage = 0
 
-var empCheck = (Int)(arc4random() % 3)
+var totalEmpWage = 0
 
+for _ in 0..< NumOfWorkingDays{
+    let empCheck = (Int)(arc4random() % 3)
 switch empCheck{
 
-    case isFullTime:
+    case isFullTime :
 
         empHrs = 8
 
     
 
-    case isPartTime:
+    case isPartTime :
 
         empHrs = 4
-
-    
 
     default:
 
@@ -34,7 +39,14 @@ switch empCheck{
 
 }
 
+    
 empWage = empHrs * empRatePerHrs
+
+totalEmpWage += empWage
+    
+}
+
 print("Employee Wage: \(empWage)")
 
+print("Total Employee wage :\(totalEmpWage)")
 
