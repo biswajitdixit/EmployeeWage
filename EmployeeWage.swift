@@ -1,4 +1,5 @@
 import UIKit
+
 let isFullTime = 1
 
 let empRatePerHrs = 20
